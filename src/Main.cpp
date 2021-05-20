@@ -40,11 +40,6 @@ int main()
         {
             cout<<"Goodbye"<<endl;
         }
-        else
-        {
-            cout<<"Invalid choice"<<endl;
-        }
-    } while (choice != 4);
 
     return 0;
 }
