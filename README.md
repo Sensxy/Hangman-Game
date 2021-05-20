@@ -7,4 +7,8 @@ Will make a hangman game where a food word is selected, and the user has to gues
 ![Hangman](https://user-images.githubusercontent.com/70344661/119041441-dd4b2880-b973-11eb-830f-689571ce8707.png)
 
 
-Ozan Hessick
+Various screens:
+(Death screen)-https://app.diagrams.net/#G12akXKDgwlOjMTvIyaPHiftFFeClVviCU
+
+
+Ozan Hessick (solo project)
