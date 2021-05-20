@@ -44,7 +44,6 @@ void GamePlay::showRules()
     cout<<"\t\t\t-------------"<<endl;
 	cout<<"Welcome to hangman."<<endl;
     cout<<"You have to guess a food name."<<endl;
-	cout<<"Each letter is represented by a star."<<endl;
 	cout<< "You have "<<MAX_TRIES<<" tries to try and guess the word."<<endl;
 	cout<<"-------------------------------------------------------------"<<endl;
     cout<<endl;
@@ -81,7 +80,7 @@ void GamePlay::startGame()
 		}
 		else
 		{
-			cout<<"You found a letter! Isn't that exciting!"<<endl;
+			cout<<"You found a letter!"<<endl;
 		}
 	
 		cout<<"You have "<<MAX_TRIES - num_of_wrong_guesses;
@@ -90,13 +89,13 @@ void GamePlay::startGame()
 		if (word == unknown)
 		{
 			cout<<word<<endl;
-			cout<<"Woohoo! You got it!"<<endl;
+			cout<<"You guessed it!"<<endl;
 			break;
 		}
 	}
 	if(num_of_wrong_guesses == MAX_TRIES)
 	{
-		cout<<"\nSorry, you lose"<<endl;
+		cout<<"Sorry, you lose"<<endl;
 		cout<<"The word was : "<<word<<endl;
         cur_score -= 20;    
 
@@ -104,7 +103,7 @@ void GamePlay::startGame()
     if (cur_score < 0)
         cur_score = 0;
 
-    cout<<"You scored: "<<cur_score<<endl;
+    cout<<"Your score: "<<cur_score<<endl;
     cout<<endl;
     updateHighScores(cur_score);   
 }
@@ -182,8 +181,7 @@ void GamePlay::showHighScores()
     if (i == 1)
     {
         cout<<"No entries yet."<<endl;
-        cout<<"Be the first one to get your name listed."<<endl;
-        cout<<"Hurry up!"<<endl;
+       
     }
 
     cout<<"---------------------------------------------"<<endl;
