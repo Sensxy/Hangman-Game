@@ -1,7 +1,9 @@
 # Hangman-Game
 
-Will make a hangman game where a food word is selected, and the user has to guess the letters in order to get the word. There will be rules, a leaderboard, and a way to exit.
-(Will use ascii art)
+Making a hangman game with scores, a visable hangman that adds limbs the more wrong guesses you attempt, end and start screen, rules, etc
+
+(update)
+Hangman game has leaderboard, start, rules, and end screens, just need to add the hangman stages (GUI)
 
 
 ![Hangman](https://user-images.githubusercontent.com/70344661/119041441-dd4b2880-b973-11eb-830f-689571ce8707.png)
