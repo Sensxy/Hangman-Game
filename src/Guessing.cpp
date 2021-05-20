@@ -1,4 +1,4 @@
-include "GamePlay.h"
+#include "GamePlay.h"
 #include "Death.png"
 
 GamePlay::GamePlay(): MAX_TRIES(5)
@@ -26,6 +26,33 @@ GamePlay::GamePlay(): MAX_TRIES(5)
     }
     fin.close();
 }
+
+void GamePlay::showTitle()
+{
+    cout<<"\t *    *     **     **    *  *****   **   **     **     **    *"<<endl;
+    cout<<"\t *    *    *  *    * *   * *        * * * *    *  *    * *   *"<<endl;
+    cout<<"\t ******   ******   *  *  * *  ***** *  *  *   ******   *  *  *"<<endl;
+    cout<<"\t *    *  *      *  *   * * *      * *     *  *      *  *   * *"<<endl;
+    cout<<"\t *    * *        * *    **  ******  *     * *        * *    **"<<endl;
+}
+
+void GamePlay::showRules()
+{
+   
+    cout<<endl;
+    cout<<"\t\t\t HOW TO PLAY"<<endl;
+    cout<<"\t\t\t-------------"<<endl;
+	cout<<"Welcome to hangman."<<endl;
+    cout<<"You have to guess a food name."<<endl;
+	cout<<"Each letter is represented by a star."<<endl;
+	cout<< "You have "<<MAX_TRIES<<" tries to try and guess the word."<<endl;
+	cout<<"-------------------------------------------------------------"<<endl;
+    cout<<endl;
+    cout<<"Press any key to continue."<<endl;
+    cin.ignore();
+    cin.get();
+}
+
 void GamePlay::startGame()
 {
     int num_of_wrong_guesses = 0, cur_score = 100;  
@@ -54,22 +81,22 @@ void GamePlay::startGame()
 		}
 		else
 		{
-			cout<<"You guessed the right letter!"<<endl;
+			cout<<"You found a letter! Isn't that exciting!"<<endl;
 		}
 	
 		cout<<"You have "<<MAX_TRIES - num_of_wrong_guesses;
-		cout<<" guesses remaining."<<endl;
+		cout<<" guesses left."<<endl;
 	
 		if (word == unknown)
 		{
 			cout<<word<<endl;
-			cout<<"You got the word!"<<endl;
+			cout<<"Woohoo! You got it!"<<endl;
 			break;
 		}
 	}
 	if(num_of_wrong_guesses == MAX_TRIES)
 	{
-		cout<<"Sorry, you lose"<<endl;
+		cout<<"\nSorry, you lose"<<endl;
 		cout<<"The word was : "<<word<<endl;
         cur_score -= 20;    
 
@@ -77,7 +104,7 @@ void GamePlay::startGame()
     if (cur_score < 0)
         cur_score = 0;
 
-    cout<<"Your score: "<<cur_score<<endl;
+    cout<<"You scored: "<<cur_score<<endl;
     cout<<endl;
     updateHighScores(cur_score);   
 }
@@ -152,3 +179,16 @@ void GamePlay::showHighScores()
         fin>>n;
         i++;
     }
+    if (i == 1)
+    {
+        cout<<"No entries yet."<<endl;
+        cout<<"Be the first one to get your name listed."<<endl;
+        cout<<"Hurry up!"<<endl;
+    }
+
+    cout<<"---------------------------------------------"<<endl;
+    cout<<endl;
+    cout<<"Press any key to continue."<<endl;
+    cin.ignore();
+    cin.get();
+}
