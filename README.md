@@ -1,5 +1,6 @@
 # Hangman-Game
 
-Will make a hangman game where a word is selected, and the user has to guess the letters in order to get the words. If a wrong letter is guessed, a limb is added to the hangman
+Will make a hangman game where a food word is selected, and the user has to guess the letters in order to get the word. There will be rules, a leaderboard, and a way to exit.
+(Will use ascii art)
 
-Ozan Hessick-everything
+Ozan Hessick
